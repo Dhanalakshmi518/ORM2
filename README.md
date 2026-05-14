@@ -21,21 +21,23 @@ Execute Django admin and create details for 5 Car
 ## PROGRAM
 ```
 models.py
+
 from django.db import models
 from django.contrib import admin
-class Car(models.Model):
-    car_name = models.CharField()
-    car_colour = models.CharField()
-    release_date = models.DateField()
-    car_model = models.CharField()
-
-class CarAdmin(admin.ModelAdmin):
-    list_display = ('car_name','car_colour','release_date','car_model')
+class Food_ordering(models.Model ):
+    hotel_name=models.CharField(max_length=18)
+    no_of_quantity=models.IntegerField(primary_key="card_ID")
+    food_name=models.CharField(max_length=18)
+    Food_rating=models.FloatField()
+    Description=models.CharField(max_length=18)
+class Food_orderingAdmin(admin.ModelAdmin):
+    list_display=["hotel_name","no_of_quantity","food_name","Food_rating","Description"]
 
 admin.py
+    
 from django.contrib import admin
-from.models import Car,CarAdmin
-admin.site.register(Car,CarAdmin)
+from .models import (Food_ordering,Food_orderingAdmin)
+admin.site.register(Food_ordering,Food_orderingAdmin)    
 ```
 
 ## OUTPUT
