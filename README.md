@@ -1,8 +1,8 @@
-# Ex02 Django ORM Web Application
-## Date: 16.09.2025
+# Ex01 Django ORM Web Application
+## Date: 15.05.2025
 
 ## AIM
-To develop a Django application to store and retrieve data from a Car Inventory Database using Object Relational Mapping(ORM).
+To develop a Django application to manage an online food delivery platform like Zomato/Swiggy using Object Relational Mapping (ORM).
 
 ## DESIGN STEPS
 
@@ -43,7 +43,6 @@ admin.site.register(Food_ordering,Food_orderingAdmin)
 ## OUTPUT
 
 ![alt text](<Screenshot 2025-09-16 154131.png>)
-
 
 ## RESULT
 Thus the program for creating car inventory database database using ORM hass been executed successfully
