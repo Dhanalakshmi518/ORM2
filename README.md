@@ -1,5 +1,5 @@
 # Ex01 Django ORM Web Application
-## Date: 15.05.2025
+## Date: 23.05.2026
 
 ## AIM
 To develop a Django application to manage an online food delivery platform like Zomato/Swiggy using Object Relational Mapping (ORM).
@@ -24,25 +24,40 @@ models.py
 
 from django.db import models
 from django.contrib import admin
-class Food_ordering(models.Model ):
-    hotel_name=models.CharField(max_length=18)
-    no_of_quantity=models.IntegerField(primary_key="card_ID")
-    food_name=models.CharField(max_length=18)
-    Food_rating=models.FloatField()
-    Description=models.CharField(max_length=18)
-class Food_orderingAdmin(admin.ModelAdmin):
-    list_display=["hotel_name","no_of_quantity","food_name","Food_rating","Description"]
+
+class FoodDelivery_DB(models.Model):
+    Order_ID = models.IntegerField(primary_key=True)
+    CustomerName = models.CharField(max_length=30)
+    OrderDate = models.DateField()
+    ItemName = models.CharField(max_length=100)
+    OrderQty = models.IntegerField()
+    UnitPrice = models.FloatField()
+    TotalAmount = models.FloatField()
+    DeliveryAddress = models.CharField(max_length=200)
+
+class FoodDelivery_DBAdmin(admin.ModelAdmin):
+    list_display = (
+        'Order_ID',
+        'CustomerName',
+        'OrderDate',
+        'ItemName',
+        'OrderQty',
+        'UnitPrice',
+        'TotalAmount',
+        'DeliveryAddress'
+    )
 
 admin.py
     
 from django.contrib import admin
-from .models import (Food_ordering,Food_orderingAdmin)
-admin.site.register(Food_ordering,Food_orderingAdmin)    
+from .models import FoodDelivery_DB, FoodDelivery_DBAdmin
+
+admin.site.register(FoodDelivery_DB, FoodDelivery_DBAdmin)
 ```
 
 ## OUTPUT
 
-![alt text](<Screenshot 2025-09-16 154131.png>)
+[alt text](<Screenshot (81)-1.png>)
 
 ## RESULT
 Thus the program for creating car inventory database database using ORM hass been executed successfully
