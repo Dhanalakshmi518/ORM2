@@ -57,7 +57,8 @@ admin.site.register(FoodDelivery_DB, FoodDelivery_DBAdmin)
 
 ## OUTPUT
 
-[alt text](<Screenshot (81)-1.png>)
+<img width="1920" height="1080" alt="Screenshot (81)" src="https://github.com/user-attachments/assets/27ec8b59-3416-478c-9ccf-5a9bb25cec28" />
+
 
 ## RESULT
 Thus the program for creating car inventory database database using ORM hass been executed successfully
